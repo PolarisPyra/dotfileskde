@@ -1,0 +1,35 @@
+MenuBar=Disabled
+
+[ContextMenu]
+ShowAddToPlaces=false
+ShowOpenTerminal=false
+
+[DetailsMode]
+PreviewSize=32
+UseSystemFont=false
+
+[General]
+CloseActiveSplitView=false
+DoubleClickViewAction=none
+EditableUrl=true
+RememberOpenedTabs=true
+ShowFullPath=true
+ShowFullPathInTitlebar=true
+ShowStatusBar=FullWidth
+Version=202
+ViewMode=1
+ViewPropsTimestamp=2025,9,7,14,14,26.144
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,librsvg,svgthumbnail,gdk-pixbuf-thumbnailer
+
+[ViewPropertiesDialog]
+2 screens: Height=328
+2 screens: Width=369
