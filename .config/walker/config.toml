@@ -55,9 +55,6 @@ provider = "todo"
 prefix = "="
 provider = "calc"
 
-[[providers.prefixes]]
-prefix = "@"
-provider = "websearch"
 
 [[providers.prefixes]]
 prefix = ":"
@@ -73,11 +70,6 @@ default = "copy"
 copy = "Return"
 save = "ctrl s"
 delete = "ctrl d"
-
-[providers.websearch]
-default = "search"
-search = "Return"
-remove_history = "ctrl BackSpace"
 
 [providers.providerlist]
 default = "activate"
