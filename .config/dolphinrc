@@ -31,5 +31,5 @@ MenuBar=Disabled
 Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,librsvg,svgthumbnail,gdk-pixbuf-thumbnailer
 
 [ViewPropertiesDialog]
-2 screens: Height=328
-2 screens: Width=369
+2 screens: Height=566
+2 screens: Width=381
