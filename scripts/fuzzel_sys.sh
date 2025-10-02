@@ -1,9 +1,40 @@
 #!/usr/bin/env bash
 
-case "$(printf "lock\nkill\nzzz\nreboot\nshutdown" | fuzzel --dmenu --width 30 --lines 5 --hide-prompt)" in
-	lock) loginctl lock-session ;;
-	kill) ps -u $USER -o pid,comm,%cpu,%mem | fuzzel --dmenu --width 30 --lines 10 --prompt "Kill: " | awk '{print $1}' | xargs -r kill ;;
-	reboot) systemctl reboot -i ;;
-	shutdown) shutdown now ;;
-	*) exit 1 ;;
-esac
+
+
+NOTIFYCMD=notify-send
+MENUCMD=fuzzel
+
+
+lock() {
+	loginctl lock-session
+}
+
+
+kill() {
+	PID=$(ps -u $USER -o pid,comm,%cpu,%mem | $MENUCMD --dmenu --width 50 --lines 15 --prompt "Kill: ") || exit 0
+	echo "$PID" | awk '{print $1}' | xargs -r kill && $NOTIFYCMD "Process killed."
+}
+
+
+reboot() {
+	systemctl reboot -i
+}
+
+
+shutdown() {
+	shutdown now
+}
+
+
+menu() {
+	CHOICE=$(printf "󰯆  Kill Process\n󰌾  Lock\n󰜉  Reboot\n󰐥  Shutdown" | $MENUCMD --dmenu --width 30 --lines 4 )
+	case "$CHOICE" in
+		*Kill*) kill ;;
+		*Lock*) lock ;;
+		*Reboot*) reboot ;;
+		*Shutdown*) shutdown ;;
+	esac
+}
+
+menu
